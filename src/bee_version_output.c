@@ -105,6 +105,14 @@ void print_format(char* s, struct beeversion *v, char *filter_pkgfullname)
                 case 'e':
                     printf("%s", v->extraversion);
                     break;
+                case 'E':
+		    if(*(v->extraversion))
+                        printf("_%s", v->extraversion);
+                    break;
+                case 'd':
+		    if(*(v->extraversion))
+                        printf("-%s", v->extraversion);
+                    break;
                 case 'r':
                     printf("%s", v->pkgrevision);
                     break;
