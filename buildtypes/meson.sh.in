@@ -50,6 +50,6 @@ bee_build() {
 #### bee_install() ############################################################
 
 bee_install() {
-    start_cmd DESTDIR=${D} ninja -C ${B} install "${@}"
+    DESTDIR=${D} start_cmd ninja -C ${B} install "${@}"
 }
 
